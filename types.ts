@@ -116,4 +116,37 @@ const subNumbers = (number1: number, number2: number) => {
 const multiplyNumbers = (number1: number, number2: number) => number1 * number2;
 
 // default parameters
-const defParams = ()
+const defParams = (param1: number = 10): void => console.log(param1);
+
+//Rest & Spread
+// spread operator: ...
+const numbers = [1,4,6,8]; // array
+Math.max(3,4,5,5,6); // list of numbers
+Math.max(...numbers); // array to list
+
+function makeArray(...args: number[]) : number[] { // list 
+    return args; //array
+}
+makeArray(4,5,6,67);
+
+
+//Destructuring Array
+const hobbies = ["Cooking", "Sport"];
+const [hobby1, hobby2] = hobbies;
+console.log(hobby1, hobby2);
+
+
+//Destructuring Object
+const user_data = {username: 'Rik', age1: 20};
+const {username: myName, age1: myAge} = user_data;
+console.log (myName, myAge);
+
+
+// Template Literals
+const myName1 = "Rik";
+const greeting = "Hello " + myName + " !";
+const literalTemplate = `Hello
+${myName}
+!`;
+console.log(greeting);
+console.log(literalTemplate);
